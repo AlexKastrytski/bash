@@ -49,3 +49,6 @@ then
 echo "User $user is correct login"
 fi
 ___________________________________________________
+for i in $(ls -l /proc/*/oom_score | awk '{print $NF}');
+do echo -n "$, i "; cat $i; 
+done
